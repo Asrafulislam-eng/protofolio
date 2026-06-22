@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auyon | World Class Portfolio</title>
+
+<style>
+
+/* ===== RESET ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui;
+}
+
+body{
+background:#050000;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* ===== CINEMATIC BACKGROUND ===== */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 15% 20%, rgba(255,0,60,0.25), transparent 40%),
+radial-gradient(circle at 80% 30%, rgba(120,0,40,0.25), transparent 40%),
+radial-gradient(circle at 50% 80%, rgba(255,50,80,0.15), transparent 50%);
+filter:blur(80px);
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95));
+z-index:-1;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+}
+
+/* ===== HERO ===== */
+.hero{
+text-align:center;
+padding-bottom:60px;
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.hero.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.avatar{
+width:130px;
+height:130px;
+border-radius:50%;
+border:2px solid rgba(255,0,60,0.5);
+box-shadow:0 0 50px rgba(255,0,60,0.3);
+object-fit:cover;
+transition:.4s;
+}
+
+.avatar:hover{
+transform:scale(1.05);
+box-shadow:0 0 80px rgba(255,0,60,0.6);
+}
+
+h1{
+font-size:58px;
+margin-top:20px;
+background:linear-gradient(90deg,#ff0033,#ff4d6d,#ff1a75);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.type{
+color:#ccc;
+margin-top:10px;
+min-height:20px;
+}
+
+/* ===== SECTION ===== */
+.section{
+margin-top:80px;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.title{
+font-size:14px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#ff2d55;
+margin-bottom:14px;
+}
+
+/* ===== CARD ===== */
+.card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,0,60,0.15);
+border-radius:16px;
+padding:22px;
+backdrop-filter:blur(12px);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#ff2d55;
+box-shadow:0 0 25px rgba(255,0,60,0.25);
+}
+
+/* ===== GRID ===== */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:15px;
+}
+
+/* ===== SKILLS ===== */
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skill{
+padding:6px 12px;
+border-radius:999px;
+background:rgba(255,0,60,0.08);
+border:1px solid rgba(255,0,60,0.2);
+color:#ff9fb3;
+font-size:12px;
+}
+
+/* ===== TIMELINE ===== */
+.timeline{
+border-left:2px solid rgba(255,0,60,0.3);
+padding-left:20px;
+}
+
+.item{
+margin-bottom:20px;
+}
+
+.item h3{
+color:#ff4d6d;
+}
+
+/* ===== LINKS ===== */
+.links{
+display:grid;
+gap:12px;
+}
+
+.links a{
+text-decoration:none;
+padding:14px;
+border-radius:14px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,0,60,0.15);
+color:#fff;
+transition:.3s;
+}
+
+.links a:hover{
+transform:translateX(6px);
+border-color:#ff2d55;
+box-shadow:0 0 20px rgba(255,0,60,0.25);
+}
+
+/* ===== FOOTER ===== */
+footer{
+text-align:center;
+margin-top:70px;
+color:#777;
+font-size:13px;
+}
+
+/* floating particles */
+.p{
+position:fixed;
+width:6px;
+height:6px;
+background:#ff2d55;
+border-radius:50%;
+opacity:0.3;
+animation:float 10s infinite linear;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-100vh);}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- particles -->
+<div class="p" style="left:10%"></div>
+<div class="p" style="left:30%"></div>
+<div class="p" style="left:50%"></div>
+<div class="p" style="left:70%"></div>
+<div class="p" style="left:90%"></div>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero" id="hero">
+
+<img class="avatar" src="auyon.jpg">
+
+<h1>Asraful Islam Auyon</h1>
+
+<div class="type" id="type"></div>
+
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+<div class="title">About</div>
+<div class="card">
+I am a digital builder focused on Discord systems, community architecture and modern web experiences.
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+<div class="title">Skills</div>
+<div class="card">
+<div class="skills">
+<div class="skill">Discord Systems</div>
+<div class="skill">Community Design</div>
+<div class="skill">Web Basics</div>
+<div class="skill">Brand Thinking</div>
+<div class="skill">Communication</div>
+</div>
+</div>
+</div>
+
+<!-- TIMELINE -->
+<div class="section">
+<div class="title">Experience</div>
+<div class="card">
+<div class="timeline">
+
+<div class="item">
+<h3>Hypernest Founder</h3>
+<p>Built digital community system & branding structure.</p>
+</div>
+
+<div class="item">
+<h3>Discord Architect</h3>
+<p>Designed structured servers for communities.</p>
+</div>
+
+<div class="item">
+<h3>Web Builder</h3>
+<p>Created clean modern landing pages.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+<div class="title">Projects</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Hypernest System</h3>
+<p>Community & digital service structure.</p>
+</div>
+
+<div class="card">
+<h3>Discord Networks</h3>
+<p>Large scale server setups.</p>
+</div>
+
+<div class="card">
+<h3>Web UI Experiments</h3>
+<p>Modern landing page designs.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+<div class="title">Connect</div>
+
+<div class="links">
+<a href="https://hypernest.site">Website</a>
+<a href="https://wa.me/8801343844612">WhatsApp</a>
+<a href="https://instagram.com/hypernest0">Instagram</a>
+<a href="https://discord.gg/ZPfstG3T9X">Discord</a>
+</div>
+
+</div>
+
+<footer>
+Copyright © 2026 Asraful Islam Auyon • All Rights Reserved
+</footer>
+
+</div>
+
+<script>
+
+// hero animation
+window.onload = () => {
+document.getElementById("hero").classList.add("show");
+typeText();
+};
+
+// scroll animation
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(sec => {
+if(sec.getBoundingClientRect().top < window.innerHeight - 100){
+sec.classList.add("show");
+}
+});
+});
+
+// typing effect
+const text = "Digital Builder • Discord Architect • Web Creator";
+let i = 0;
+
+function typeText(){
+let el = document.getElementById("type");
+
+if(i < text.length){
+el.innerHTML += text.charAt(i);
+i++;
+setTimeout(typeText, 60);
+}
+}
+
+</script>
+
+</body>
+</html>
