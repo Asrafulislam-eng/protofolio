@@ -6,84 +6,104 @@
 <title>Asraful Islam Auyon</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:#0a0a0a;
-color:#ffffff;
-padding:20px;
+background:#0f1117;
+color:#fff;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
+padding:20px;
 }
 
 .hero{
 text-align:center;
-padding:50px 20px;
+padding:60px 20px;
 }
 
 .hero img{
-width:150px;
-height:150px;
+width:170px;
+height:170px;
 border-radius:50%;
 object-fit:cover;
-border:4px solid #d4af37;
-box-shadow:0 0 20px rgba(212,175,55,.3);
+border:4px solid #ffffff20;
+box-shadow:0 0 30px rgba(255,255,255,.1);
 }
 
 .hero h1{
-font-size:36px;
+font-size:42px;
 margin-top:20px;
 }
 
-.hero p{
-color:#cfcfcf;
+.subtitle{
+color:#a1a1aa;
 margin-top:10px;
 line-height:1.8;
 }
 
 .badge{
 display:inline-block;
-margin-top:18px;
+margin-top:15px;
 padding:10px 20px;
-background:#d4af37;
-color:#000;
-border-radius:30px;
-font-weight:bold;
+border-radius:50px;
+background:#1f2937;
+border:1px solid #374151;
+}
+
+.section{
+margin-top:40px;
+}
+
+.section-title{
+font-size:28px;
+margin-bottom:20px;
 }
 
 .card{
-background:#161616;
-padding:25px;
-margin-top:20px;
+background:#161b22;
+border:1px solid #30363d;
+padding:20px;
 border-radius:18px;
-border:1px solid #262626;
-}
-
-.card h2{
-color:#d4af37;
-margin-bottom:15px;
 }
 
 .card p{
+color:#c9d1d9;
 line-height:1.8;
-color:#d6d6d6;
 }
 
-.list{
-list-style:none;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 }
 
-.list li{
-padding:12px 0;
-border-bottom:1px solid #2a2a2a;
+.service{
+background:#161b22;
+border:1px solid #30363d;
+padding:20px;
+border-radius:18px;
+transition:.3s;
+}
+
+.service:hover{
+transform:translateY(-5px);
+}
+
+.service h3{
+margin-bottom:10px;
+}
+
+.service p{
+color:#9ca3af;
 }
 
 .skills{
@@ -92,35 +112,53 @@ flex-wrap:wrap;
 gap:10px;
 }
 
-.skills span{
-background:#222;
+.skill{
+background:#1f2937;
 padding:10px 15px;
-border-radius:20px;
-border:1px solid #333;
+border-radius:30px;
+border:1px solid #374151;
+}
+
+.links{
+display:grid;
+gap:12px;
+}
+
+.links a{
+text-decoration:none;
+background:#161b22;
+border:1px solid #30363d;
+padding:15px;
+border-radius:15px;
+color:white;
+transition:.3s;
+}
+
+.links a:hover{
+background:#1f2937;
+}
+
+.contact{
+background:#161b22;
+border:1px solid #30363d;
+padding:20px;
+border-radius:18px;
 }
 
 .contact p{
-margin:12px 0;
-}
-
-.contact a{
-color:#d4af37;
-text-decoration:none;
-}
-
-.contact a:hover{
-text-decoration:underline;
+margin:10px 0;
+color:#c9d1d9;
 }
 
 footer{
 text-align:center;
-margin-top:30px;
-color:#999;
-padding-bottom:20px;
+padding:30px;
+color:#6b7280;
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
 <div class="container">
@@ -131,11 +169,11 @@ padding-bottom:20px;
 
 <h1>Asraful Islam Auyon</h1>
 
-<p>
+<div class="subtitle">
 Digital Services Specialist<br>
 Discord Manager<br>
 Basic Web Developer
-</p>
+</div>
 
 <div class="badge">
 Founder of Hypernest
@@ -143,78 +181,103 @@ Founder of Hypernest
 
 </div>
 
-<div class="card">
-<h2>About Me</h2>
+<div class="section">
+<h2 class="section-title">About Me</h2>
 
+<div class="card">
 <p>
-I am Asraful Islam Auyon, Founder of Hypernest. I specialize in Discord Server Management, Logo Design, Banner Design, and Basic Web Development. I help communities and businesses build a strong digital presence through creative and reliable digital solutions.
+I am Asraful Islam Auyon, Founder of Hypernest. I specialize in Discord Server Management, Logo Design, Banner Design and Basic Web Development. I help communities and businesses establish a strong digital presence.
 </p>
-
+</div>
 </div>
 
-<div class="card">
+<div class="section">
+<h2 class="section-title">Services</h2>
 
-<h2>Services</h2>
+<div class="grid">
 
-<ul class="list">
-<li>Discord Server Management</li>
-<li>Logo Design</li>
-<li>Banner Design</li>
-<li>Basic Web Development</li>
-</ul>
-
+<div class="service">
+<h3>Discord Management</h3>
+<p>Community setup, moderation and management.</p>
 </div>
 
-<div class="card">
+<div class="service">
+<h3>Logo Design</h3>
+<p>Professional and creative logo creation.</p>
+</div>
 
-<h2>Skills</h2>
+<div class="service">
+<h3>Banner Design</h3>
+<p>Modern banners for communities and brands.</p>
+</div>
+
+<div class="service">
+<h3>Basic Web Development</h3>
+<p>Simple and responsive websites.</p>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Skills</h2>
 
 <div class="skills">
-<span>Discord Server Management</span>
-<span>Community Management</span>
-<span>Logo Design</span>
-<span>Banner Design</span>
-<span>MS Word</span>
-<span>MS Excel</span>
-<span>Gaming</span>
+<div class="skill">Discord Server Management</div>
+<div class="skill">Community Management</div>
+<div class="skill">Logo Design</div>
+<div class="skill">Banner Design</div>
+<div class="skill">MS Word</div>
+<div class="skill">MS Excel</div>
+<div class="skill">Gaming</div>
 </div>
 
 </div>
 
-<div class="card">
+<div class="section">
+<h2 class="section-title">🔗 Quick Links</h2>
 
-<h2>Hypernest</h2>
+<div class="links">
 
-<p>
-Founder & Manager of Hypernest. Managing online communities, digital services, gaming projects, and digital growth strategies.
-</p>
+<a href="https://hypernest.site" target="_blank">
+🌐 Website
+</a>
 
-<br>
+<a href="https://wa.me/8801343844612" target="_blank">
+📱 WhatsApp
+</a>
 
-<p>
-Website: hypernest.site
-</p>
+<a href="https://instagram.com/hypernest0" target="_blank">
+📸 Instagram
+</a>
+
+<a href="https://discord.gg/ZPfstG3T9X">
+🎮 Discord 
+</a>
+
+<a href="https://www.facebook.com/share/1bEy3SbjF1/?mibextid=wwXIfr">
+📘 Facebook 
+</a>
 
 </div>
 
-<div class="card contact">
+</div>
 
-<h2>Contact</h2>
+<div class="section">
+<h2 class="section-title">Contact</h2>
 
-<p>📱 WhatsApp: +8801343844612</p>
-
-<p>📸 Instagram: @hypernest0</p>
-
-<p>📘 Facebook: Hypernest</p>
-
-<p>🎮 Discord: mystx.auyon</p>
-
-<p>🌐 Website: hypernest.site</p>
+<div class="contact">
+<p>WhatsApp: +8801343844612</p>
+<p>Instagram: @hypernest0</p>
+<p>Facebook: Hypernest</p>
+<p>Discord: mystx.auyon</p>
+<p>Website: hypernest.site</p>
+</div>
 
 </div>
 
 <footer>
-© 2026 Asraful Islam Auyon | Founder of Hypernest
+© 2026 Asraful Islam Auyon • Founder of Hypernest
 </footer>
 
 </div>
